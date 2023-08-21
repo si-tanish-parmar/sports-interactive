@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Promises</title>
+    <script>
+        let firstPromise = function(){
+            return new Promise(function(resolve, reject){
+                    setTimeout(function(){
+                        if(true){
+                            resolve("resolve data from first promise");
+                        }else{
+                            reject("reject error from promise");
+                        }
+                    },1000);
+                    });
+        }
+        let secondPromise = function(){
+            return new Promise(function(resolve, reject){
+                    setTimeout(function(){
+                        if(true){
+                            resolve("resolve data from second promise");
+                        }else{
+                            reject("reject error from promise");
+                        }
+                    },3000);
+                    });
+        }
+        let thirdPromise = function(){
+            return new Promise(function(resolve, reject){
+                    setTimeout(function(){
+                        if(true){
+                            resolve("resolve data from third promise");
+                        }else{
+                            reject("reject error from promise");
+                        }
+                    },4000);
+                    });
+        }
+        // all expects all the promises to resolve
+        // any expects any of the promises to resolve
+        // race expects any of the promises to resolve or reject
+        Promise.all([firstPromise(), secondPromise(), thirdPromise()])
+        .then(function(res){
+            console.log("Responses", res);
+        })
+        .catch(function(err){
+            console.log("Error", err);
+        })
+        .finally(function(){
+            console.log("All promises are complete");
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

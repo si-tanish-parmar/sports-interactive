@@ -1,0 +1,16 @@
+create 3 functions call them 
+fun1 
+fun2
+fun3 
+call fun1 on body onload 
+call fun2 on window addEventListener load 
+call fun3 on document addEventListener DOMContentLoaded 
+
+and findout which of these gets called first
+
+99,50,29,74,26,7.17,18,69,12
+
+
+http://p.ip.fi/NiMx
+from the array filter all the values less than 60 and double them.
+

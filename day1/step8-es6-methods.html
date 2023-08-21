@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+    <script>
+       var favNums = [99,50,29,74,26,7,17,18,69,12];
+       /*  
+       for(let i = 0; i < favNum.length; i++){
+            console.log(favNum[i]);
+        }; 
+        */
+        /*   
+        favNum.forEach(function(val,idx,arr){
+            console.log(val);
+        }); 
+        */
+        // favNum.forEach( val => console.log(val) );
+
+        /* var doubleFavNums = [];
+        favNums.forEach(function(val,idx,arr){
+           doubleFavNums.push(val * 2);
+        }); 
+
+        console.log(favNums);
+        console.log(doubleFavNums); */
+
+       /*  
+       var doubleFavNums = favNums.map(function(val,idx,arr){
+            return val * 2;
+        }); 
+        */ 
+       /*  
+        var doubleFavNums = favNums.map((val,idx,arr) =>  val * 2); 
+        console.log(favNums);
+        console.log(doubleFavNums); 
+        */
+       /*
+       var lessThan50 = favNums.filter( val => val < 50);
+       console.log(lessThan50);
+       */
+      /*
+      var allLessThan50 = favNums.every( val => val < 50);
+      console.log(allLessThan50);// false
+      
+      var fewLessThan50 = favNums.some( val => val < 50);
+      console.log(fewLessThan50);// true
+      */
+        /* 
+        let total = favNums.reduce(function(initVal, val, idx, arr){
+            return initVal + val;
+        }, 0) 
+        */
+        let total = favNums.reduceRight(function(initVal, val, idx, arr){
+            return initVal + val;
+        }, 0)
+        console.log( total );
+
+        console.log(favNums.indexOf(18));
+      </script>
+</head>
+<body>
+    
+</body>
+</html>

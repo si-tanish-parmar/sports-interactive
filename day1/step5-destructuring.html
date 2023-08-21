@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+    <script>
+         var hero = {
+            title : "Ironman",
+            firstname : "Tony",
+            lastname : "Strak",
+            power : 7,
+            city : "New York"
+        };
+       /*  var temphero = hero;
+        console.log(temphero.power);
+        console.log(hero.power);
+        temphero.power = 10;
+        console.log(temphero.power);// ??? 10
+        console.log(hero.power);// ??? 10
+ */
+        /*
+        var herotitle = hero.title;
+        var herofirstname = hero.firstname;
+        var herolastname = hero.lastname;
+        var heropower = hero.power;
+        var herocity = hero.city;
+        
+        console.log(heropower);
+        console.log(hero.power);
+        heropower = 10;
+        console.log(heropower);
+        console.log(hero.power);
+        */
+
+        // ES6 Destructuring
+/* 
+        var { 
+            title : herotitle, 
+            firstname : herofirstname, 
+            lastname : herolastname, 
+            city : herocity, 
+            power : heropower } = hero;
+        
+        console.log(heropower);
+        console.log(hero.power);
+        heropower = 10;
+        console.log(heropower);
+        console.log(hero.power); */
+
+        
+        var {  title,  firstname,  lastname,   city,  power } = hero;
+        
+        console.log(power);
+        console.log(hero.power);
+        power = 10;
+        console.log(power);
+        console.log(hero.power);
+
+        // var temphero = JSON.parse(JSON.stringify(hero));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
